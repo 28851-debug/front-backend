@@ -108,7 +108,6 @@ export async function login(email, senha) {
 //     O backend responde 400 com "Este e-mail já está cadastrado."
 //     Sua mensagem tem que aparecer em vermelho na tela.
 //
-
 export async function cadastrar(nome, email, senha) {
   const resposta = await fetch(`${API_URL}/api/usuarios/cadastrar`, {
     method: "POST",
@@ -122,7 +121,7 @@ export async function cadastrar(nome, email, senha) {
     throw new Error(dados.mensagem || "Não foi possível criar a conta.");
   }
 
-  return dados; // { sucesso, mensagem, token, usuario }
+  return dados;
 }
 
 // ╔═════════════════════════════════════════════════════════════════════╗
